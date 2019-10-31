@@ -34,7 +34,7 @@
         6.其他补充：
             1.优雅关停：保证服务在关闭时程序运行一半   D:\go-20191030\golang-Gin\other_shutdown
             2.模板渲染：                             D:\go-20191030\golang-Gin\other_template 具体使用参照官网
-            3.自动证书：自动配置证书，过期可以自动续约
+            3.自动证书：自动配置证书，过期可以自动续约  D:\go-20191030\golang-Gin\other_autotls
     2.搭建企业级脚手架：
         1.功能展示
         2.文件分层
