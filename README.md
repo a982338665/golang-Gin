@@ -51,5 +51,33 @@
     gin 1.4.0    
     idea
     
-**4.**
-          
+**4.搭建测试环境：**
+
+    1.新建github仓库：golang-Gin
+    2.拉取此仓库到本地，并使用idea打开
+    3.进入目录：并init
+        D:\go-20191030\golang-Gin>go mod init
+        go: cannot determine module path for source directory D:\go-20191030\golang-Gin (outside GOPATH, module path must be specified)
+    4.出现以上错误时：添加模块名重新init
+        D:\go-20191030\golang-Gin>go mod init golang-Gin
+        go: creating new go.mod: module golang-Gin
+    5.下载Gin：
+        D:\go-20191030\golang-Gin>go get -v github.com/gin-gonic/gin@v1.4
+        dial tcp 216.58.200.49:443: connectex: A connection attempt
+    6.出现以上错误的原因如下：
+        在Go 1.13中，我们可以通过GOPROXY来控制代理，以及通过GOPRIVATE控制私有库不走代理。
+        设置GOPROXY代理：
+        go env -w GOPROXY=https://goproxy.cn,direct
+        设置GOPRIVATE来跳过私有库，比如常用的Gitlab或Gitee，中间使用逗号分隔：
+        go env -w GOPRIVATE=*.gitlab.com,*.gitee.com
+        如果在运行go mod vendor时，提示Get https://sum.golang.org/lookup/xxxxxx: dial tcp 216.58.200.49:443: i/o timeout，则是因为Go 1.13设置了
+        默认的GOSUMDB=sum.golang.org，这个网站是被墙了的，用于验证包的有效性，可以通过如下命令关闭：
+        go env -w GOSUMDB=off
+        可以设置 GOSUMDB="sum.golang.google.cn"， 这个是专门为国内提供的sum 验证服务。
+        go env -w GOSUMDB="sum.golang.google.cn"
+    7.解决5里的错误，重新下载：
+        D:\go-20191030\golang-Gin>go env -w GOSUMDB="sum.golang.google.cn"
+        D:\go-20191030\golang-Gin>go get -v github.com/gin-gonic/gin@v1.4
+    8.配置go moudles：
+        Settings》》Languages & Frameworks 》》 go >>go moudles >> 将Enable打上勾，这样才能引用数据
+    9.创建start文件夹，创建main.go
