@@ -21,7 +21,8 @@ type Person struct {
 	测试访问：
 http://localhost:8080/testing	 		[Age为必填字段 Name为必填字段 Address为必填字段]
 http://localhost:8080/testing?age=18	[Name为必填字段 Address为必填字段]
-http://localhost:8080/testing?age=18&locale=en	[Name is a required field Address is a required field]
+http://localhost:8080/testing?age=18&locale=en		[Name is a required field Address is a required field]
+http://localhost:8080/testing?age=18&locale=en22	[Name为必填字段 Address为必填字段] 因为en22这个语言在代码中未支持，所以显示默认语言
 */
 //验证信息多语言化
 func main() {

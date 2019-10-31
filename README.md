@@ -27,14 +27,14 @@
         4.验证请求参数：//请求参数验证：文档：https://godoc.org/gopkg.in/go-playground/validator.v8
             1.结构体binding验证      D:\go-20191030\golang-Gin\vaild_binding
             2.自定义验证             D:\go-20191030\golang-Gin\valid_custom
-            3.支持多语言错误信息
-        5.中间件：拦截操作
-            1.使用gin中间件
-            2.自定义ip白名单中间件
+            3.支持多语言错误信息     D:\go-20191030\golang-Gin\valid_v9
+        5.中间件：拦截操作-请求拦截，日志打印
+            1.使用gin中间件          D:\go-20191030\golang-Gin\middleware_gin
+            2.自定义ip白名单中间件   D:\go-20191030\golang-Gin\middleware_whitelist
         6.其他补充：
-            1.优雅关停
-            2.模板渲染
-            3.自动证书
+            1.优雅关停：保证服务在关闭时程序运行一半   D:\go-20191030\golang-Gin\other_shutdown
+            2.模板渲染：                             D:\go-20191030\golang-Gin\other_template 具体使用参照官网
+            3.自动证书：自动配置证书，过期可以自动续约
     2.搭建企业级脚手架：
         1.功能展示
         2.文件分层
