@@ -14,12 +14,11 @@
     
     1.gin基础知识：
         1.安装gin及快速开始
-            
         2.请求路由：
-            1.设置多种请求类型
-            2.绑定静态文件夹
+            1.设置多种请求类型：D:\go-20191030\golang-Gin\router_type\main.go
+            2.绑定静态文件夹:D:\go-20191030\golang-Gin\router_static
             3.参数作为uri
-            4.泛绑定
+            4.泛绑定：类似于nginx的请求匹配
         3.获取请求参数：
             1.获取get请求参数
             2.获取post请求参数
