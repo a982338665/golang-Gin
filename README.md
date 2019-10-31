@@ -13,20 +13,20 @@
 **2.课程内容：**
     
     1.gin基础知识：
-        1.安装gin及快速开始
+        1.安装gin及快速开始            D:\go-20191030\golang-Gin\start
         2.请求路由：
-            1.设置多种请求类型：D:\go-20191030\golang-Gin\router_type\main.go
-            2.绑定静态文件夹:D:\go-20191030\golang-Gin\router_static
-            3.参数作为uri
-            4.泛绑定：类似于nginx的请求匹配
+            1.设置多种请求类型：         D:\go-20191030\golang-Gin\router_type\main.go
+            2.绑定静态文件夹:              D:\go-20191030\golang-Gin\router_static
+            3.参数作为uri:                  D:\go-20191030\golang-Gin\router_uri
+            4.泛绑定：类似于nginx的请求匹配:D:\go-20191030\golang-Gin\router_generic
         3.获取请求参数：
-            1.获取get请求参数
-            2.获取post请求参数
-            3.获取body值
-            4.获取参数bind绑定结构
-        4.验证请求参数：
-            1.结构体binding验证
-            2.自定义验证
+            1.获取get请求参数         D:\go-20191030\golang-Gin\param_get
+            2.获取post请求参数        D:\go-20191030\golang-Gin\param_body
+            3.获取body值              D:\go-20191030\golang-Gin\param_body
+            4.获取参数bind绑定结构     D:\go-20191030\golang-Gin\param_struct
+        4.验证请求参数：//请求参数验证：文档：https://godoc.org/gopkg.in/go-playground/validator.v8
+            1.结构体binding验证      D:\go-20191030\golang-Gin\vaild_binding
+            2.自定义验证             D:\go-20191030\golang-Gin\valid_custom
             3.支持多语言错误信息
         5.中间件：拦截操作
             1.使用gin中间件
